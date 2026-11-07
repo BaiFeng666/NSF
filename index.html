@@ -91,7 +91,10 @@
     btn.href = info.zip ? info.zip.url : info.release_url;
     btn.removeAttribute("aria-disabled");
     if (info.notes) { var n = document.getElementById("notes"); n.hidden = false; n.textContent = info.notes; }
-    var rows = (info.history || []).slice(0, 10).map(function (r) {
+  }
+
+  function renderHistory(list) {
+    var rows = (list || []).slice(0, 10).map(function (r) {
       return "<tr><td><a href=\"https://github.com/" + REPO + "/releases/tag/" + esc(r.tag) + "\">" + esc(r.tag) + "</a></td><td>" +
              esc(r.date || "") + "</td><td>" + esc(String(r.notes || "").split("\n")[0].slice(0, 80)) + "</td></tr>";
     });
@@ -100,6 +103,8 @@
   }
 
   // 主数据源：同站点的 latest.json（发布脚本维护，不受 GitHub API 限流影响）。
+  // 更新日志单独放 history.json（latest.json 要保持很小，游戏每次启动都会读它）。
+  getJson("history.json").then(renderHistory).catch(function () { document.getElementById("history").textContent = "暂无。"; });
   getJson("latest.json").then(render).catch(function () {
     document.getElementById("latest").innerHTML = "无法获取版本信息，请直接前往 <a href=\"https://github.com/" + REPO + "/releases\">Releases 页面</a> 下载。";
     document.getElementById("history").textContent = "—";
