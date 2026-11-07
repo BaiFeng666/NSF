@@ -1,12 +1,12 @@
 {
-    "version":  "0.1.1",
-    "tag":  "v0.1.1",
+    "version":  "0.1.0",
+    "tag":  "v0.1.0",
     "date":  "2026-11-07",
-    "notes":  "主界面右下角显示当前版本号；若干小改动。",
+    "notes":  "首个公开版本 v0.1.0。",
     "zip":  {
-                "name":  "NarutoStormFierce-0.1.1-win64.zip",
-                "size":  525944203,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.1/NarutoStormFierce-0.1.1-win64.zip"
+                "name":  "NarutoStormFierce-0.1.0-win64.zip",
+                "size":  525950457,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.0/NarutoStormFierce-0.1.0-win64.zip"
             },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.1"
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.0"
 }
