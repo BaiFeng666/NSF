@@ -79,38 +79,32 @@
 <script>
 (function () {
   var REPO = "BaiFeng666/NSF";
-  var API = "https://api.github.com/repos/" + REPO + "/releases";
   function mb(n) { return (n / 1048576).toFixed(0) + " MB"; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+  function getJson(url) { return fetch(url, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); }
 
-  fetch(API, { headers: { "Accept": "application/vnd.github+json" } })
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (list) {
-      list = list.filter(function (r) { return !r.draft && !r.prerelease; });
-      var latest = list[0];
-      var $latest = document.getElementById("latest");
-      if (!latest) { $latest.textContent = "暂无正式版本。"; document.getElementById("history").textContent = "暂无。"; return; }
-
-      var zip = (latest.assets || []).filter(function (a) { return /-win64\.zip$/.test(a.name); })[0];
-      var date = (latest.published_at || "").slice(0, 10);
-      $latest.innerHTML = "最新版本 <b>" + esc(latest.tag_name) + "</b>" + (date ? "，发布于 " + date : "") +
-                          (zip ? "，大小 " + mb(zip.size) : "");
-      var btn = document.getElementById("dl-full");
-      if (zip) { btn.href = zip.browser_download_url; btn.removeAttribute("aria-disabled"); }
-      else { btn.href = latest.html_url; btn.removeAttribute("aria-disabled"); btn.textContent = "前往下载页"; }
-      if (latest.body) { var n = document.getElementById("notes"); n.hidden = false; n.textContent = latest.body; }
-
-      var rows = list.slice(0, 10).map(function (r) {
-        return "<tr><td><a href=\"" + esc(r.html_url) + "\">" + esc(r.tag_name) + "</a></td><td>" +
-               esc((r.published_at || "").slice(0, 10)) + "</td><td>" + esc((r.body || "").split("\n")[0].slice(0, 80)) + "</td></tr>";
-      });
-      document.getElementById("history").innerHTML = "<table><tr><th>版本</th><th>日期</th><th>摘要</th></tr>" + rows.join("") + "</table>";
-    })
-    .catch(function () {
-      document.getElementById("latest").innerHTML = "无法获取版本信息，请直接前往 <a href=\"https://github.com/" + REPO + "/releases\">Releases 页面</a> 下载。";
-      document.getElementById("history").textContent = "—";
-      var b = document.getElementById("dl-full"); b.href = "https://github.com/" + REPO + "/releases/latest"; b.removeAttribute("aria-disabled");
+  function render(info) {
+    var date = info.date || "";
+    document.getElementById("latest").innerHTML = "最新版本 <b>" + esc(info.tag) + "</b>" + (date ? "，发布于 " + esc(date) : "") +
+      (info.zip ? "，大小 " + mb(info.zip.size) : "");
+    var btn = document.getElementById("dl-full");
+    btn.href = info.zip ? info.zip.url : info.release_url;
+    btn.removeAttribute("aria-disabled");
+    if (info.notes) { var n = document.getElementById("notes"); n.hidden = false; n.textContent = info.notes; }
+    var rows = (info.history || []).slice(0, 10).map(function (r) {
+      return "<tr><td><a href=\"https://github.com/" + REPO + "/releases/tag/" + esc(r.tag) + "\">" + esc(r.tag) + "</a></td><td>" +
+             esc(r.date || "") + "</td><td>" + esc(String(r.notes || "").split("\n")[0].slice(0, 80)) + "</td></tr>";
     });
+    document.getElementById("history").innerHTML = rows.length
+      ? "<table><tr><th>版本</th><th>日期</th><th>摘要</th></tr>" + rows.join("") + "</table>" : "暂无。";
+  }
+
+  // 主数据源：同站点的 latest.json（发布脚本维护，不受 GitHub API 限流影响）。
+  getJson("latest.json").then(render).catch(function () {
+    document.getElementById("latest").innerHTML = "无法获取版本信息，请直接前往 <a href=\"https://github.com/" + REPO + "/releases\">Releases 页面</a> 下载。";
+    document.getElementById("history").textContent = "—";
+    var b = document.getElementById("dl-full"); b.href = "https://github.com/" + REPO + "/releases/latest"; b.removeAttribute("aria-disabled");
+  });
 })();
 </script>
 </body>
