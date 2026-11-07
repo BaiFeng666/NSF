@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>究极风暴：激战 · Naruto Storm Fierce</title>
+<meta name="description" content="粉丝向免费同人格斗游戏，PC (Windows) 下载与更新日志。">
+<style>
+  :root { --bg:#0f1218; --card:#181d27; --line:#2a3242; --fg:#e8ecf3; --dim:#9aa6bb; --accent:#ff8a1f; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.7 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 64px 0 32px; text-align:center; background: radial-gradient(ellipse at top, #2b1d10 0%, var(--bg) 70%); }
+  h1 { margin:0; font-size: 2.2rem; letter-spacing: .04em; }
+  h1 small { display:block; font-size:1rem; color:var(--dim); font-weight:normal; margin-top:6px; letter-spacing:.2em; }
+  .tag { color:var(--dim); margin-top:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px; margin:24px 0; }
+  .card h2 { margin:0 0 12px; font-size:1.2rem; }
+  .btn { display:inline-block; background:var(--accent); color:#1a1006; font-weight:700; text-decoration:none;
+         padding:12px 28px; border-radius:8px; margin:6px 10px 6px 0; }
+  .btn.alt { background:transparent; color:var(--fg); border:1px solid var(--line); font-weight:normal; }
+  .btn[aria-disabled="true"] { opacity:.5; pointer-events:none; }
+  .meta { color:var(--dim); font-size:.9rem; }
+  pre.notes { white-space:pre-wrap; word-break:break-word; background:#10141c; border:1px solid var(--line); border-radius:8px; padding:14px; margin:12px 0 0; font:inherit; font-size:.92rem; }
+  ul { padding-left: 1.2em; margin: 8px 0; }
+  table { border-collapse: collapse; width:100%; font-size:.92rem; }
+  td, th { border-bottom:1px solid var(--line); padding:8px 6px; text-align:left; }
+  footer { color:var(--dim); font-size:.85rem; text-align:center; padding: 24px 0 48px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>究极风暴：激战<small>NARUTO STORM FIERCE</small></h1>
+    <p class="tag">粉丝向 · 免费 · 非商业 · Windows PC</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card" id="download">
+    <h2>下载</h2>
+    <div id="latest" class="meta">正在获取最新版本…</div>
+    <p>
+      <a id="dl-full" class="btn" aria-disabled="true" href="#">下载最新版（Windows）</a>
+      <a class="btn alt" id="dl-all" href="https://github.com/BaiFeng666/NSF/releases">所有版本</a>
+    </p>
+    <pre class="notes" id="notes" hidden></pre>
+  </section>
+
+  <section class="card">
+    <h2>怎么玩</h2>
+    <ul>
+      <li>下载 zip，<b>完整解压</b>到一个普通文件夹（不要直接在压缩包里运行），双击 <code>NarutoStormFierce.exe</code>。</li>
+      <li>系统：Windows 10 / 11 64 位，需要支持 DirectX 11/12 的显卡。</li>
+      <li>建议使用手柄；键盘也可以游玩。</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>更新</h2>
+    <ul>
+      <li>游戏启动时会检查新版本，发现后弹出提示，点「立即更新」即可，更新器会自动下载、校验并重新启动游戏。</li>
+      <li>只有一两个版本的差距时只下载变化的文件；差距较大会下载完整包。</li>
+      <li>也可以手动下载新版 zip，覆盖解压到原目录。</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>更新日志</h2>
+    <div id="history" class="meta">正在加载…</div>
+  </section>
+
+  <section class="card">
+    <h2>声明</h2>
+    <p class="meta">
+      本作是个人制作的粉丝向同人作品，完全免费，不用于任何商业目的，也不在任何商店销售。
+      《火影忍者》及相关角色、名称、素材的版权归原权利人所有。如权利人认为本作有不妥之处，请通过
+      <a href="https://github.com/BaiFeng666/NSF/issues">Issues</a> 联系，将尽快处理。
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">反馈问题：<a href="https://github.com/BaiFeng666/NSF/issues">GitHub Issues</a></div>
+</footer>
+
+<script>
+(function () {
+  var REPO = "BaiFeng666/NSF";
+  var API = "https://api.github.com/repos/" + REPO + "/releases";
+  function mb(n) { return (n / 1048576).toFixed(0) + " MB"; }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+
+  fetch(API, { headers: { "Accept": "application/vnd.github+json" } })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (list) {
+      list = list.filter(function (r) { return !r.draft && !r.prerelease; });
+      var latest = list[0];
+      var $latest = document.getElementById("latest");
+      if (!latest) { $latest.textContent = "暂无正式版本。"; document.getElementById("history").textContent = "暂无。"; return; }
+
+      var zip = (latest.assets || []).filter(function (a) { return /-win64\.zip$/.test(a.name); })[0];
+      var date = (latest.published_at || "").slice(0, 10);
+      $latest.innerHTML = "最新版本 <b>" + esc(latest.tag_name) + "</b>" + (date ? "，发布于 " + date : "") +
+                          (zip ? "，大小 " + mb(zip.size) : "");
+      var btn = document.getElementById("dl-full");
+      if (zip) { btn.href = zip.browser_download_url; btn.removeAttribute("aria-disabled"); }
+      else { btn.href = latest.html_url; btn.removeAttribute("aria-disabled"); btn.textContent = "前往下载页"; }
+      if (latest.body) { var n = document.getElementById("notes"); n.hidden = false; n.textContent = latest.body; }
+
+      var rows = list.slice(0, 10).map(function (r) {
+        return "<tr><td><a href=\"" + esc(r.html_url) + "\">" + esc(r.tag_name) + "</a></td><td>" +
+               esc((r.published_at || "").slice(0, 10)) + "</td><td>" + esc((r.body || "").split("\n")[0].slice(0, 80)) + "</td></tr>";
+      });
+      document.getElementById("history").innerHTML = "<table><tr><th>版本</th><th>日期</th><th>摘要</th></tr>" + rows.join("") + "</table>";
+    })
+    .catch(function () {
+      document.getElementById("latest").innerHTML = "无法获取版本信息，请直接前往 <a href=\"https://github.com/" + REPO + "/releases\">Releases 页面</a> 下载。";
+      document.getElementById("history").textContent = "—";
+      var b = document.getElementById("dl-full"); b.href = "https://github.com/" + REPO + "/releases/latest"; b.removeAttribute("aria-disabled");
+    });
+})();
+</script>
+</body>
+</html>
