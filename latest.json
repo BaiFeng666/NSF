@@ -1,12 +1,12 @@
 {
-    "version":  "0.1.2",
-    "tag":  "v0.1.2",
+    "version":  "0.1.0",
+    "tag":  "v0.1.0",
     "date":  "2026-11-08",
-    "notes":  "联机对战：血条上方的忍者名称改为显示玩家昵称；对方断联超过10秒后，可按退出键（Esc/手柄Start）不再等待并离开；更新器失败时会提示官网下载地址。",
+    "notes":  "首个公开版本 0.1.0。",
     "zip":  {
-                "name":  "NarutoStormFierce-0.1.2-win64.zip",
-                "size":  551435460,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.2/NarutoStormFierce-0.1.2-win64.zip"
+                "name":  "NarutoStormFierce-0.1.0-win64.zip",
+                "size":  513175696,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.0/NarutoStormFierce-0.1.0-win64.zip"
             },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.2"
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.0"
 }
