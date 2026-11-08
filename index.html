@@ -45,6 +45,10 @@
       <a id="dl-full" class="btn" aria-disabled="true" href="#">下载最新版（Windows）</a>
       <a class="btn alt" id="dl-all" href="https://github.com/BaiFeng666/NSF/releases">所有版本</a>
     </p>
+    <div id="mirrors" hidden>
+      <div class="meta">直连 GitHub 慢或打不开时，换下面的加速地址（第三方志愿者镜像，可能随时失效；下载后请核对 <code>latest.json</code> 里的大小）：</div>
+      <p id="mirror-list"></p>
+    </div>
     <pre class="notes" id="notes" hidden></pre>
   </section>
 
@@ -83,6 +87,16 @@
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
   function getJson(url) { return fetch(url, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); }
 
+  // 与更新器 NSFUpdater.cs 的 DefaultMirrors 保持一致：前缀式镜像 https://<域名>/<原始下载地址>
+  var MIRRORS = ["gh-proxy.com", "gh.monlor.com", "fastgit.cc", "cdn.akaere.online", "tvv.tw", "ghproxy.imciel.com", "ghfast.top"];
+  function renderMirrors(url) {
+    if (!url || url.indexOf("https://github.com/") !== 0) return;
+    document.getElementById("mirror-list").innerHTML = MIRRORS.map(function (m, i) {
+      return "<a class=\"btn alt\" rel=\"noopener\" href=\"https://" + m + "/" + esc(url) + "\">加速 " + (i + 1) + " · " + esc(m) + "</a>";
+    }).join("");
+    document.getElementById("mirrors").hidden = false;
+  }
+
   function render(info) {
     var date = info.date || "";
     document.getElementById("latest").innerHTML = "最新版本 <b>" + esc(info.tag) + "</b>" + (date ? "，发布于 " + esc(date) : "") +
@@ -90,6 +104,7 @@
     var btn = document.getElementById("dl-full");
     btn.href = info.zip ? info.zip.url : info.release_url;
     btn.removeAttribute("aria-disabled");
+    renderMirrors(info.zip ? info.zip.url : "");
     if (info.notes) { var n = document.getElementById("notes"); n.hidden = false; n.textContent = info.notes; }
   }
 
