@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>究极风暴：激战 · Naruto Storm Fierce</title>
-<meta name="description" content="究极风暴：激战 —— 无剧情、纯格斗对战的粉丝向游戏。国内低延迟服务器中继联机，小体积，集成各代高可玩性操作。Windows PC 免费下载。">
+<meta name="description" content="究极风暴：激战 —— 无剧情、纯格斗对战的粉丝向游戏。优先 P2P 直连、失败时自动切换国内服务器中继，小体积，集成各代高可玩性操作。Windows PC 免费下载。">
 <meta name="theme-color" content="#f4f1ea">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 2l8 14 16-4-4 16 12 8-12 8 4 16-16-4-8 14-8-14-16 4 4-16L0 36l12-8-4-16 16 4z' fill='%23e8241a' stroke='%23111' stroke-width='3' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23111'/%3E%3C/svg%3E">
 <style>
@@ -110,6 +110,17 @@
   .feature:nth-child(2) .ico,.feature:nth-child(4) .ico{background:var(--ink)}
   .feature h3{margin:0 0 8px;font-size:1.18rem;font-weight:900;font-style:italic}
   .feature p{margin:0;color:var(--dim);font-size:.95rem;font-weight:500}
+
+  /* 格斗机制 */
+  .mechs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:980px){.mechs{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.mechs{grid-template-columns:1fr}}
+  .mech:nth-child(even) .ico{background:var(--ink)}
+  .mech h3{margin:0 0 8px;font-size:1.18rem;font-weight:900;font-style:italic}
+  .mech p{margin:0;color:var(--dim);font-size:.95rem;font-weight:500}
+  .mech.more{background:var(--ink);color:var(--white)}
+  .mech.more p{color:#ddd}
+  .mech.more .ico{background:var(--red)}
 
   /* 联机 */
   .net{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;align-items:stretch}
@@ -230,6 +241,7 @@
     </a>
     <div class="nav-links">
       <a href="#features">特色</a>
+      <a href="#mechanics">机制</a>
       <a href="#online">联机</a>
       <a href="#roadmap">进度</a>
       <a href="#changelog">更新日志</a>
@@ -268,8 +280,8 @@
       <div class="features">
         <div class="card feature reveal">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0114 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01"/></svg></div>
-          <h3>低延迟联机</h3>
-          <p>告别糟糕的 P2P 体验。直连失败时自动切换国内服务器中继，稳定又低延迟。</p>
+          <h3>P2P 直连 + 中继兜底</h3>
+          <p>优先 P2P 直连，延迟最低；直连失败时才自动切换国内服务器中继，保证能打。</p>
         </div>
         <div class="card feature reveal">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg></div>
@@ -290,6 +302,49 @@
     </div>
   </section>
 
+  <!-- 格斗机制 -->
+  <section id="mechanics">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Mechanics</span>
+        <h2>不只是复刻，更多格斗机制</h2>
+        <p>在羁绊的手感之上，融合历代的精华。</p>
+      </div>
+      <div class="mechs">
+        <div class="card mech reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <h3>瞬间觉醒</h3>
+          <p>部分人物支持瞬间觉醒，关键时刻一键爆发，扭转战局。</p>
+        </div>
+        <div class="card mech reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg></div>
+          <h3>第二忍术 × LL 技融合</h3>
+          <p>将羁绊的第二忍术与 LL 技融合为一，既保留招式特色，又更易衔接连招。</p>
+        </div>
+        <div class="card mech reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6M3 6h4M3 18h4"/></svg></div>
+          <h3>更灵活的身法</h3>
+          <p>冲刺、侧跳、空中移动更自由，进退攻防的选择更多。</p>
+        </div>
+        <div class="card mech reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.6 6.4L21 9l-5 4.4L17.5 20 12 16.5 6.5 20 8 13.4 3 9l6.4-.6z"/></svg></div>
+          <h3>查克拉手里剑</h3>
+          <p>启用羁绊中被弃用的查克拉手里剑，让远程牵制多一种选择。</p>
+        </div>
+        <div class="card mech reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/></svg></div>
+          <h3>最新风暴的模型与特效</h3>
+          <p>角色模型与招式特效采用风暴系列的最新版本，画面更精致。</p>
+        </div>
+        <div class="card mech more reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 015.8 1c0 2-3 2.5-3 4M12 17h.01"/></svg></div>
+          <h3>更多格斗机制</h3>
+          <p>更多格斗机制，等你发现。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 联机 -->
   <section id="online">
     <div class="wrap">
@@ -302,12 +357,12 @@
         <div class="net-flow reveal">
           <div class="step s1">
             <div class="n">1</div>
-            <div><h4>优先 P2P 直连</h4><p>网络条件允许时双方直接连接，路径最短、延迟最低。</p></div>
+            <div><h4>优先 P2P 直连</h4><p>默认先尝试双方直接连接：路径最短、延迟最低，也能降低服务器成本。</p></div>
           </div>
           <div class="arrow">直连失败？自动切换 ↓</div>
           <div class="step s2">
             <div class="n">2</div>
-            <div><h4>国内服务器中继</h4><p>通过低延迟的国内中继服务器转发，NAT 打洞失败也能稳定对战。</p></div>
+            <div><h4>国内服务器中继（兜底）</h4><p>仅在直连失败（如 NAT 打洞不成功）时启用，通过国内中继服务器转发，确保仍能对战。</p></div>
           </div>
         </div>
         <div class="card quote reveal">
