@@ -1,12 +1,12 @@
 {
-    "version":  "0.1.0",
-    "tag":  "v0.1.0",
+    "version":  "0.1.1",
+    "tag":  "v0.1.1",
     "date":  "2026-11-08",
-    "notes":  "首个公开版本 0.1.0。",
+    "notes":  "卡忍术、延迟忍术实现（风暴4手感，哪里手感不一样欢迎详细反馈）\n切人改为消耗一半支援量\n神罗天征增加防御取消窗口\n切人之后罚站时间缩短\n当身改成风暴4的将敌人击飞\n实现风暴4的卡投技",
     "zip":  {
-                "name":  "NarutoStormFierce-0.1.0-win64.zip",
-                "size":  513175696,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.0/NarutoStormFierce-0.1.0-win64.zip"
+                "name":  "NarutoStormFierce-0.1.1-win64.zip",
+                "size":  541980858,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.1/NarutoStormFierce-0.1.1-win64.zip"
             },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.0"
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.1"
 }
