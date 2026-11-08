@@ -1,12 +1,12 @@
 {
-    "version":  "0.1.0",
-    "tag":  "v0.1.0",
-    "date":  "2026-11-07",
-    "notes":  "首个公开版本 v0.1.0。",
+    "version":  "0.1.1",
+    "tag":  "v0.1.1",
+    "date":  "2026-11-08",
+    "notes":  "- 联机对战：血条上方显示双方昵称\n- 昵称支持输入中文\n- 按键提示根据当前使用的手柄或键盘自动切换，不再同时显示\n- 房间对战：取消统一星级；修复 1 局/3 局赛制无法切换\n- 官网新增加速下载备选地址",
     "zip":  {
-                "name":  "NarutoStormFierce-0.1.0-win64.zip",
-                "size":  525952348,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.0/NarutoStormFierce-0.1.0-win64.zip"
+                "name":  "NarutoStormFierce-0.1.1-win64.zip",
+                "size":  551435819,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.1/NarutoStormFierce-0.1.1-win64.zip"
             },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.0"
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.1"
 }
