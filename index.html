@@ -74,6 +74,15 @@
   /* 按钮内部文字反斜，需要包一层；对直接文本节点用 padding 兜底 */
   .btn{padding-left:30px;padding-right:30px}
 
+  /* QQ 群 */
+  .qq{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:30px;padding:10px 22px;background:var(--red);color:var(--white);border:4px solid var(--ink);box-shadow:var(--sh);transform:rotate(-1.2deg) skew(-6deg);cursor:pointer;font-weight:900}
+  .qq:hover{background:var(--red2);transform:rotate(-1.2deg) skew(-6deg) translate(-2px,-2px);box-shadow:9px 9px 0 var(--ink)}
+  .qq .qq-t{font-size:.85rem;letter-spacing:.2em;background:var(--ink);padding:1px 12px}
+  .qq .qq-n{font-size:1.5rem;font-style:italic;letter-spacing:.06em;-webkit-text-stroke:.04em var(--ink);paint-order:stroke fill}
+  .qq .qq-c{font-size:.8rem;background:var(--white);color:var(--ink);padding:1px 10px;border:2px solid var(--ink)}
+  .qq-band{background:var(--ink);color:var(--white);text-align:center;padding:22px 0;border-bottom:4px solid var(--red)}
+  .qq-band .qq{margin-top:0;border-color:var(--white)}
+
   /* 区块 */
   section{padding:76px 0}
   .sec-head{text-align:center;max-width:680px;margin:0 auto 52px}
@@ -243,6 +252,7 @@
       <a class="btn btn-ghost" href="#features">了解特色</a>
     </div>
     <div class="hero-meta"><span>Windows 10 / 11</span><span id="hero-size">约 500 MB</span><span>支持手柄</span></div>
+    <div class="qq" role="button" tabindex="0" data-qq="1135348627" title="点击复制群号"><span class="qq-t">官方 QQ 交流群</span><span class="qq-n">1135348627</span><span class="qq-c">点击复制</span></div>
   </div>
 </header>
 
@@ -334,7 +344,7 @@
           <ul><li>移植到 Android 平台</li><li>随时随地来一把</li></ul>
         </div>
       </div>
-      <div class="notice reveal">遇到问题？<a href="https://github.com/BaiFeng666/NSF/issues" rel="noopener">到 GitHub Issues 反馈 →</a></div>
+      <div class="notice reveal">遇到问题？可加官方 QQ 交流群 <b>1135348627</b>，或<a href="https://github.com/BaiFeng666/NSF/issues" rel="noopener">到 GitHub Issues 反馈 →</a></div>
     </div>
   </section>
 
@@ -405,6 +415,7 @@
   <div class="wrap">
     <p>究极风暴：激战（Naruto Storm Fierce）为非官方粉丝向同人作品，免费提供，与任何商业公司无关。</p>
     <div class="links">
+      <a class="btn btn-primary" style="padding:9px 20px;font-size:.9rem" href="#top">QQ 群 1135348627</a>
       <a class="btn btn-ghost" style="padding:9px 20px;font-size:.9rem" href="https://github.com/BaiFeng666/NSF/issues" rel="noopener">反馈问题</a>
       <a class="btn btn-ghost" style="padding:9px 20px;font-size:.9rem" href="https://github.com/BaiFeng666/NSF" rel="noopener">GitHub</a>
     </div>
@@ -418,6 +429,18 @@
   function mb(n) { return (n / 1048576).toFixed(0) + " MB"; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
   function getJson(url) { return fetch(url, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); }
+
+  // 点击复制 QQ 群号
+  document.querySelectorAll(".qq").forEach(function (q) {
+    function copy() {
+      var n = q.getAttribute("data-qq"), c = q.querySelector(".qq-c");
+      function ok() { if (c) { c.textContent = "已复制 ✓"; setTimeout(function () { c.textContent = "点击复制"; }, 1800); } }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(n).then(ok, function () { if (c) c.textContent = "请手动复制"; });
+      else { var t = document.createElement("textarea"); t.value = n; document.body.appendChild(t); t.select(); try { document.execCommand("copy"); ok(); } catch (e) {} document.body.removeChild(t); }
+    }
+    q.addEventListener("click", copy);
+    q.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); copy(); } });
+  });
 
   // 出现动画
   var els = document.querySelectorAll(".reveal");
