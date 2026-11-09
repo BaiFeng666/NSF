@@ -1,12 +1,12 @@
 {
-    "version":  "0.1.1",
-    "tag":  "v0.1.1",
-    "date":  "2026-11-08",
-    "notes":  "卡忍术、延迟忍术实现（风暴4手感，哪里手感不一样欢迎详细反馈）\n切人改为消耗一半支援量\n神罗天征增加防御取消窗口\n切人之后罚站时间缩短\n当身改成风暴4的将敌人击飞\n实现风暴4的卡投技",
+    "version":  "0.1.2",
+    "tag":  "v0.1.2",
+    "date":  "2026-11-09",
+    "notes":  "新增忍者丁次（少年篇）\n修复水门配音\n修复卡墙外\n修复部分道具buff特效消失\n修复换人道具也会改变\n修复蓄力觉醒后换人的逻辑bug\n优化空中查克拉冲刺手感",
     "zip":  {
-                "name":  "NarutoStormFierce-0.1.1-win64.zip",
-                "size":  541980858,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.1/NarutoStormFierce-0.1.1-win64.zip"
+                "name":  "NarutoStormFierce-0.1.2-win64.zip",
+                "size":  541864006,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.2/NarutoStormFierce-0.1.2-win64.zip"
             },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.1"
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.2"
 }
