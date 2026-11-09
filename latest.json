@@ -1,12 +1,12 @@
 {
-    "version":  "0.1.2",
-    "tag":  "v0.1.2",
+    "version":  "0.1.3",
+    "tag":  "v0.1.3",
     "date":  "2026-11-09",
-    "notes":  "新增忍者丁次（少年篇）\n修复水门配音\n修复卡墙外\n修复部分道具buff特效消失\n修复换人道具也会改变\n修复蓄力觉醒后换人的逻辑bug\n优化空中查克拉冲刺手感",
+    "notes":  "- 修复换人冲刺接不上攻击\n- 修复切人冲刺中途可以跳跃\n- 修复练习场中途防御功能无效\n- 修复三局赛制换局未重置替身、查克拉等数据\n- 修复换人时旧队长受到攻击后停留在场上（需实测反馈）\n- 修复小模型受击时模型异常拉伸\n- 优化空中查克拉冲刺手感",
     "zip":  {
-                "name":  "NarutoStormFierce-0.1.2-win64.zip",
-                "size":  541864006,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.2/NarutoStormFierce-0.1.2-win64.zip"
+                "name":  "NarutoStormFierce-0.1.3-win64.zip",
+                "size":  542238384,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.3/NarutoStormFierce-0.1.3-win64.zip"
             },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.2"
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.3"
 }
