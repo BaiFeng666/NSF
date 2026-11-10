@@ -1,12 +1,12 @@
 {
-    "version":  "0.1.4",
-    "tag":  "v0.1.4",
-    "date":  "2026-11-10",
-    "notes":  "- 新增地图：五封印悬崖\n- 修复部分角色配音 bug\n- 修复换人后部分道具无法使用\n- 修复攻击僵直逻辑\n- 修复蓄力觉醒时的额外操作\n- 优化援助条显示状态\n- 优化手里剑取消攻击后摇机制\n- 优化高空侧跳拉镖机制\n- 新机制：空中 A 后可接手里剑（测试）\n- 支持房间聊天打字",
-    "zip":  {
-                "name":  "NarutoStormFierce-0.1.4-win64.zip",
-                "size":  570250248,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.4/NarutoStormFierce-0.1.4-win64.zip"
-            },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.4"
+  "version": "0.1.5",
+  "tag": "v0.1.5",
+  "date": "2026-11-10",
+  "notes": "新增\n- 换人后头顶显示 1P / 2P 提示\n- 联机对战可开启「强制中继」，连接更稳定\n- 换人系统更接近风暴4：入场与落地特效、镜头随新队长落地移动、前摇可被动作取消\n\n修复\n- 空中冲刺起手过弱\n- 队员替身独立计算\n- 联机对战不同步导致卡死（现在会立即提示并结束本局）\n- 佩恩没有黑棒（含拖尾）\n- 手里剑打断窗口过大",
+  "zip": {
+    "name": "NarutoStormFierce-0.1.5-win64.zip",
+    "size": 570606963,
+    "url": "https://github.com/BaiFeng666/NSF/releases/download/v0.1.5/NarutoStormFierce-0.1.5-win64.zip"
+  },
+  "release_url": "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.5"
 }
