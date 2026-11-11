@@ -1,12 +1,12 @@
 {
-  "version": "0.1.5",
-  "tag": "v0.1.5",
-  "date": "2026-11-10",
-  "notes": "新增\n- 换人后头顶显示 1P / 2P 提示\n- 联机对战可开启「强制中继」，连接更稳定\n- 换人系统更接近风暴4：入场与落地特效、镜头随新队长落地移动、前摇可被动作取消\n\n修复\n- 空中冲刺起手过弱\n- 队员替身独立计算\n- 联机对战不同步导致卡死（现在会立即提示并结束本局）\n- 佩恩没有黑棒（含拖尾）\n- 手里剑打断窗口过大",
+  "version": "0.1.6",
+  "tag": "v0.1.6",
+  "date": "2026-11-11",
+  "notes": "更新内容\n新增忍者鹿丸（少年）\n新增忍者我爱罗（少年）\n新增忍者井野（少年）\n新增忍者小李（少年）\n新增忍者天天（少年）\n新增忍者宁次（少年）（瞬间觉醒）\n支持空中瞬间觉醒\n房间对战支持观战（测试）\n修复援护被动与奥义替身演出\n地面冲刺撞到防御弹开距离拉长\n优化卡忍术的风暴4手感\n战斗UI缩小",
   "zip": {
-    "name": "NarutoStormFierce-0.1.5-win64.zip",
-    "size": 570606963,
-    "url": "https://github.com/BaiFeng666/NSF/releases/download/v0.1.5/NarutoStormFierce-0.1.5-win64.zip"
+    "name": "NarutoStormFierce-0.1.6-win64.zip",
+    "size": 680039873,
+    "url": "https://github.com/BaiFeng666/NSF/releases/download/v0.1.6/NarutoStormFierce-0.1.6-win64.zip"
   },
-  "release_url": "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.5"
+  "release_url": "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.6"
 }
