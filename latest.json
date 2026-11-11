@@ -1,12 +1,12 @@
 {
-  "version": "0.1.6",
-  "tag": "v0.1.6",
-  "date": "2026-11-11",
-  "notes": "更新内容\n新增忍者鹿丸（少年）\n新增忍者我爱罗（少年）\n新增忍者井野（少年）\n新增忍者小李（少年）\n新增忍者天天（少年）\n新增忍者宁次（少年）（瞬间觉醒）\n支持空中瞬间觉醒\n房间对战支持观战（测试）\n修复援护被动与奥义替身演出\n地面冲刺撞到防御弹开距离拉长\n优化卡忍术的风暴4手感\n战斗UI缩小",
-  "zip": {
-    "name": "NarutoStormFierce-0.1.6-win64.zip",
-    "size": 680039873,
-    "url": "https://github.com/BaiFeng666/NSF/releases/download/v0.1.6/NarutoStormFierce-0.1.6-win64.zip"
-  },
-  "release_url": "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.6"
+    "version":  "0.1.7",
+    "tag":  "v0.1.7",
+    "date":  "2026-11-11",
+    "notes":  "- 中文、英文和数字改用游戏自带字体，不再依赖系统字体。\n- 菜单界面改为使用游戏自带的面板配置，补齐 ICU 和文本 Shader 引用。\n- 修复观战问题：改为在房间里点“观战”按钮进入，不再自动进入观战；修复观战中途离开房间后重新进入被断开连接的问题。",
+    "zip":  {
+                "name":  "NarutoStormFierce-0.1.7-win64.zip",
+                "size":  687463100,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.7/NarutoStormFierce-0.1.7-win64.zip"
+            },
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.7"
 }
