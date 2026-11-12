@@ -1,12 +1,19 @@
 {
-    "version":  "0.1.7",
-    "tag":  "v0.1.7",
-    "date":  "2026-11-11",
-    "notes":  "- 中文、英文和数字改用游戏自带字体，不再依赖系统字体。\n- 菜单界面改为使用游戏自带的面板配置，补齐 ICU 和文本 Shader 引用。\n- 修复观战问题：改为在房间里点“观战”按钮进入，不再自动进入观战；修复观战中途离开房间后重新进入被断开连接的问题。",
+    "version":  "0.1.8",
+    "tag":  "v0.1.8",
+    "date":  "2026-11-13",
+    "notes":  "- 安卓版本正式发布。\r\n- 大幅度优化性能与画质。\r\n- 增加破防眩晕时长。\r\n- 调整连击数 UI，使其靠边显示，减少画面遮挡。\r\n- 修复查克拉球掉落机制。\r\n- 增加更多可调节的性能选项。\r\n- 修复部分角色特效、模型缺漏。\r\n- 修复进入演出镜头前切换角色有时触发的问题。\r\n- 修复替身、援助、风暴值等数据机制。\r\n- 修复侧跳后摇衔接攻击、防御、移动过晚的问题。\r\n- 修复水门觉醒时第二忍术无法通过瞬移取消后摇的问题。\r\n",
     "zip":  {
-                "name":  "NarutoStormFierce-0.1.7-win64.zip",
-                "size":  687463100,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.7/NarutoStormFierce-0.1.7-win64.zip"
+                "name":  "NarutoStormFierce-0.1.8-win64.zip",
+                "size":  487784545,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.8/NarutoStormFierce-0.1.8-win64.zip"
             },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.7"
+    "android":  {
+                    "version":  "0.1.8",
+                    "name":  "NarutoStormFierce-0.1.8-android.apk",
+                    "size":  541211768,
+                    "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.8/NarutoStormFierce-0.1.8-android.apk",
+                    "date":  "2026-11-13"
+                },
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.8"
 }

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>究极风暴：激战 · Naruto Storm Fierce</title>
-<meta name="description" content="究极风暴：激战 —— 无剧情、纯格斗对战的粉丝向游戏。优先 P2P 直连、失败时自动切换国内服务器中继，小体积，集成各代高可玩性操作。Windows PC 免费下载。">
+<meta name="description" content="究极风暴：激战 —— 无剧情、纯格斗对战的粉丝向游戏。优先 P2P 直连、失败时自动切换国内服务器中继，小体积，集成各代高可玩性操作。Windows PC 与 Android 安卓版免费下载。">
 <meta name="theme-color" content="#f4f1ea">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 2l8 14 16-4-4 16 12 8-12 8 4 16-16-4-8 14-8-14-16 4 4-16L0 36l12-8-4-16 16 4z' fill='%23e8241a' stroke='%23111' stroke-width='3' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23111'/%3E%3C/svg%3E">
 <style>
@@ -73,6 +73,7 @@
   .btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
   /* 按钮内部文字反斜，需要包一层；对直接文本节点用 padding 兜底 */
   .btn{padding-left:30px;padding-right:30px}
+  .btn[hidden]{display:none}
 
   /* QQ 群 */
   .qq{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:30px;padding:10px 22px;background:var(--red);color:var(--white);border:4px solid var(--ink);box-shadow:var(--sh);transform:rotate(-1.2deg) skew(-6deg);cursor:pointer;font-weight:900}
@@ -160,7 +161,11 @@
   .notice a:hover{background:var(--ink);color:var(--white)}
 
   /* 下载 */
-  .dl{display:grid;grid-template-columns:1.25fr 1fr;gap:26px}
+  .dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+  .install{margin-top:32px}
+  .dl-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px}
+  .dl-main h3{margin:0 0 18px;font-size:1.35rem;font-weight:900}
+  .download-links{display:flex;justify-content:center;margin-top:30px}
   @media(max-width:880px){.dl{grid-template-columns:1fr}}
   .dl-main{overflow:hidden;background:var(--white)}
   .dl-main::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
@@ -263,7 +268,7 @@
       </a>
       <a class="btn btn-ghost" href="#features">了解特色</a>
     </div>
-    <div class="hero-meta"><span>Windows 10 / 11</span><span id="hero-size">约 500 MB</span><span>支持手柄</span></div>
+    <div class="hero-meta"><span>Windows PC / Android</span><span id="hero-size">双平台免费下载</span><span>键盘 · 手柄 · 触屏</span></div>
     <div class="qq" role="button" tabindex="0" data-qq="1135348627" title="点击复制群号"><span class="qq-t">官方 QQ 交流群</span><span class="qq-n">1135348627</span><span class="qq-c">点击复制</span></div>
   </div>
 </header>
@@ -285,8 +290,8 @@
         </div>
         <div class="card feature reveal">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg></div>
-          <h3>极致轻量</h3>
-          <p>只保留格斗对战玩法，体积尽可能小，下载快、更新快，支持增量补丁。</p>
+          <h3>PC 与安卓都能玩</h3>
+          <p>电脑上用键盘或手柄，手机上用触屏虚拟手柄。PC 支持增量更新，安卓下载新版 APK 覆盖安装。</p>
         </div>
         <div class="card feature reveal">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
@@ -393,10 +398,10 @@
           <h3>匹配与排位</h3>
           <ul><li>快速随机匹配</li><li>排名战 / 段位系统</li><li>机制稳定后开放</li></ul>
         </div>
-        <div class="card rm later reveal">
-          <span class="tag">○ 未来规划</span>
-          <h3>安卓端支持</h3>
-          <ul><li>移植到 Android 平台</li><li>随时随地来一把</li></ul>
+        <div class="card rm now reveal">
+          <span class="tag">● 正式发布</span>
+          <h3>安卓版本上线</h3>
+          <ul><li>触屏菜单与战斗虚拟手柄</li><li>横屏与安全区适配</li><li>可调节画质与性能选项</li></ul>
         </div>
       </div>
       <div class="notice reveal">遇到问题？可加官方 QQ 交流群 <b>1135348627</b>，或<a href="https://github.com/BaiFeng666/NSF/issues" rel="noopener">到 GitHub Issues 反馈 →</a></div>
@@ -409,45 +414,75 @@
       <div class="sec-head reveal">
         <span class="eyebrow">Download</span>
         <h2>立即开战</h2>
-        <p>免费下载，游戏内自动更新。</p>
+        <p>选择你的平台，下载最新版本。</p>
       </div>
       <div class="dl">
         <div class="card dl-main reveal">
+          <h3>Windows PC</h3>
           <div class="ver"><b id="ver-tag"><span class="skeleton"></span></b><span id="ver-sub">正在获取最新版本…</span></div>
           <div class="stats">
             <div><small>平台</small><strong>Windows 64 位</strong></div>
             <div><small>大小</small><strong id="ver-size">—</strong></div>
             <div><small>发布日期</small><strong id="ver-date">—</strong></div>
           </div>
-          <div style="display:flex;gap:16px;flex-wrap:wrap">
-            <a id="dl-full" class="btn btn-primary" aria-disabled="true" href="#">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5l7.5-1v7H3v-6zm0 13l7.5 1v-7H3v6zm8.5 1.1L21 21v-8.5h-9.5v7.1zm0-15.2v7.1H21V3l-9.5 1.4z"/></svg>
-              下载最新版
-            </a>
-            <a class="btn btn-ghost" href="https://github.com/BaiFeng666/NSF/releases" rel="noopener">所有版本</a>
+          <div class="dl-actions">
+            <a id="dl-full" class="btn btn-primary" aria-disabled="true" href="#">下载 Windows ZIP</a>
           </div>
           <details class="mirrors" id="mirrors" hidden>
-            <summary><span>⚡ 下载慢？使用国内加速镜像</span><span class="chev">▾</span></summary>
+            <summary><span>下载慢？使用 PC 加速镜像</span><span class="chev">▾</span></summary>
             <div class="mirror-body">
-              <p>第三方志愿者镜像，可能随时失效；下载后请核对 <code>latest.json</code> 里的大小。</p>
+              <p>第三方镜像可能失效，可换一条线路重试。</p>
               <div class="mirror-grid" id="mirror-list"></div>
             </div>
           </details>
-          <div class="notes" id="notes" hidden></div>
         </div>
-
+        <div class="card dl-main reveal">
+          <h3>Android 安卓</h3>
+          <div class="ver"><b id="android-ver"><span class="skeleton"></span></b><span id="android-status">正在获取最新版本…</span></div>
+          <div class="stats">
+            <div><small>平台</small><strong>Android ARM64</strong></div>
+            <div><small>大小</small><strong id="android-size">—</strong></div>
+            <div><small>发布日期</small><strong id="android-date">—</strong></div>
+          </div>
+          <div class="dl-actions">
+            <a id="dl-apk" class="btn btn-primary" aria-disabled="true" href="#">下载安卓 APK</a>
+          </div>
+          <details class="mirrors" id="android-mirrors" hidden>
+            <summary><span>下载慢？使用安卓加速镜像</span><span class="chev">▾</span></summary>
+            <div class="mirror-body">
+              <p>第三方镜像可能失效，可换一条线路重试。</p>
+              <div class="mirror-grid" id="android-mirror-list"></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="download-links"><a class="btn btn-ghost" href="https://github.com/BaiFeng666/NSF/releases" rel="noopener">查看所有版本</a></div>
+      <div class="notes reveal" id="notes" hidden></div>
+      <div class="dl install">
         <div class="card howto reveal">
-          <h3>安装与更新</h3>
+          <h3>PC 安装与更新</h3>
           <ol>
-            <li>下载 zip 后<b>完整解压</b>到一个普通文件夹（不要直接在压缩包里运行）。</li>
+            <li>下载 ZIP 后<b>完整解压</b>到普通文件夹。</li>
             <li>双击 <code>NarutoStormFierce.exe</code> 启动游戏。</li>
-            <li>启动时会自动检查新版本，点「<b>立即更新</b>」即可自动下载、校验并重启；版本差距小时只下载变化的文件。</li>
-            <li>也可以手动下载新版 zip，覆盖解压到原目录。</li>
+            <li>启动时自动检查版本，点「<b>立即更新</b>」下载、校验并重启。相邻版本优先使用增量补丁。</li>
           </ol>
           <div class="sys">
-            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Windows 10 / 11 64 位</div>
-            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>支持 DirectX 11 / 12 的显卡</div>
-            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="2" y="6" width="20" height="12" rx="6"/><path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/></svg>推荐手柄，键盘也可游玩</div>
+            <div>Windows 10 / 11 64 位</div>
+            <div>支持 DirectX 11 / 12 的显卡</div>
+            <div>支持键盘与手柄</div>
+          </div>
+        </div>
+        <div class="card howto reveal">
+          <h3>安卓安装与更新</h3>
+          <ol>
+            <li>下载 APK，按系统提示允许浏览器安装应用。</li>
+            <li>安装后横屏启动，使用触屏虚拟手柄游玩。</li>
+            <li>游戏提示新版本时，点「<b>下载新版</b>」下载完整 APK，直接覆盖安装即可。</li>
+          </ol>
+          <div class="sys">
+            <div>Android 8.0 及以上 · ARM64 设备</div>
+            <div>触屏操作 · 横屏游玩</div>
+            <div>画面设置支持调节画质与性能</div>
           </div>
         </div>
       </div>
@@ -508,31 +543,48 @@
 
   // 与更新器 NSFUpdater.cs 的 DefaultMirrors 保持一致：前缀式镜像 https://<域名>/<原始下载地址>
   var MIRRORS = ["gh-proxy.com", "gh.monlor.com", "fastgit.cc", "cdn.akaere.online", "tvv.tw", "ghproxy.imciel.com", "ghfast.top"];
-  function renderMirrors(url) {
+  function renderMirrors(url, panelId, listId) {
     if (!url || url.indexOf("https://github.com/") !== 0) return;
-    $("mirror-list").innerHTML = MIRRORS.map(function (m, i) {
+    $(listId).innerHTML = MIRRORS.map(function (m, i) {
       return "<a rel=\"noopener\" href=\"https://" + m + "/" + esc(url) + "\"><span>加速 " + (i + 1) + "</span><em>" + esc(m) + "</em></a>";
     }).join("");
-    $("mirrors").hidden = false;
+    $(panelId).hidden = false;
   }
 
   function render(info) {
     $("ver-tag").textContent = info.tag || "—";
-    $("ver-sub").textContent = "最新版本";
+    $("ver-sub").textContent = "最新 PC 版本";
     $("hero-ver").textContent = (info.tag || "") + " 早期测试版";
     if (info.date) $("ver-date").textContent = info.date;
-    if (info.zip) { $("ver-size").textContent = mb(info.zip.size); $("hero-size").textContent = mb(info.zip.size); }
+    if (info.zip) $("ver-size").textContent = mb(info.zip.size);
     var btn = $("dl-full");
     btn.href = info.zip ? info.zip.url : info.release_url;
     btn.removeAttribute("aria-disabled");
-    renderMirrors(info.zip ? info.zip.url : "");
+    renderMirrors(info.zip ? info.zip.url : "", "mirrors", "mirror-list");
+    var android = info.android;
+    if (android && android.url) {
+      var a = $("dl-apk"); a.href = android.url; a.removeAttribute("aria-disabled");
+      $("android-ver").textContent = android.version ? "v" + String(android.version).replace(/^v/i, "") : "—";
+      $("android-status").textContent = "最新安卓版本";
+      $("android-size").textContent = android.size ? mb(android.size) : "—";
+      $("android-date").textContent = android.date || info.date || "—";
+      renderMirrors(android.url, "android-mirrors", "android-mirror-list");
+    } else {
+      $("android-ver").textContent = "—";
+      $("android-status").textContent = "暂未提供 APK";
+    }
+    var sizes = [];
+    if (info.zip && info.zip.size) sizes.push("PC " + mb(info.zip.size));
+    if (android && android.size) sizes.push("安卓 " + mb(android.size));
+    if (sizes.length) $("hero-size").textContent = sizes.join(" / ");
     if (info.notes) { var n = $("notes"); n.hidden = false; n.textContent = info.notes; }
   }
 
   function renderHistory(list) {
     var rows = (list || []).slice(0, 10).map(function (r, i) {
       return "<div class=\"log\"><div class=\"when\"><a rel=\"noopener\" href=\"https://github.com/" + REPO + "/releases/tag/" + esc(r.tag) + "\">" + esc(r.tag) + "</a>" +
-             (i === 0 ? "<span class=\"badge\">最新</span>" : "") + "<small>" + esc(r.date || "") + "</small></div>" +
+             (i === 0 ? "<span class=\"badge\">最新</span>" : "") + "<small>" + esc(r.date || "") + "</small>" +
+             (r.platforms ? "<small>" + esc(r.platforms.join(" / ")) + "</small>" : "") + "</div>" +
              "<div class=\"what\">" + esc(String(r.notes || "").trim()) + "</div></div>";
     });
     $("history").innerHTML = rows.length ? rows.join("") : "<div class=\"muted\">暂无。</div>";
@@ -544,7 +596,11 @@
   getJson("latest.json").then(render).catch(function () {
     $("ver-tag").textContent = "—";
     $("ver-sub").innerHTML = "无法获取版本信息，请前往 <a style=\"color:var(--red);font-weight:900\" href=\"https://github.com/" + REPO + "/releases\">Releases 页面</a> 下载。";
-    var b = $("dl-full"); b.href = "https://github.com/" + REPO + "/releases/latest"; b.removeAttribute("aria-disabled");
+    ["dl-full", "dl-apk"].forEach(function (id) {
+      var b = $(id); b.href = "https://github.com/" + REPO + "/releases/latest"; b.removeAttribute("aria-disabled");
+    });
+    $("android-ver").textContent = "—";
+    $("android-status").textContent = "请前往 Releases 页面下载";
   });
 })();
 </script>
