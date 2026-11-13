@@ -1,19 +1,19 @@
 {
-    "version":  "0.1.10",
-    "tag":  "v0.1.10",
+    "version":  "0.1.11",
+    "tag":  "v0.1.11",
     "date":  "2026-11-13",
-    "notes":  "- 舞台界面优化\n- 优化安卓小键盘\n- 优化虚拟手柄显示逻辑\n- 支持虚拟手柄组合键、删键\n- 修复缩放分辨率 bug\n- 修复屏幕效果缺失\n- 加入水面的脚附着查克拉和波纹效果",
+    "notes":  "- 优化宽屏下房间大厅、房间列表和菜单列表的布局，按原比例铺满可用宽度\n- 修复安卓密码输入时软键盘被系统安全键盘切换干扰、意外关闭的问题\n- 账号密码与房间密码改为明文显示，房间密码使用数字键盘\n- 修复舞台碰撞计算的跨平台浮点精度差异，改善联机同步一致性\n- 统一战斗开场与回合字幕的逻辑计时，修复联机及观战中的开场同步问题",
     "zip":  {
-                "name":  "NarutoStormFierce-0.1.10-win64.zip",
-                "size":  494178840,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.10/NarutoStormFierce-0.1.10-win64.zip"
+                "name":  "NarutoStormFierce-0.1.11-win64.zip",
+                "size":  494184964,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.11/NarutoStormFierce-0.1.11-win64.zip"
             },
     "android":  {
-                    "version":  "0.1.10",
-                    "name":  "NarutoStormFierce-0.1.10-android.apk",
-                    "size":  547695576,
-                    "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.10/NarutoStormFierce-0.1.10-android.apk",
+                    "version":  "0.1.11",
+                    "name":  "NarutoStormFierce-0.1.11-android.apk",
+                    "size":  547704944,
+                    "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.11/NarutoStormFierce-0.1.11-android.apk",
                     "date":  "2026-11-13"
                 },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.10"
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.11"
 }
