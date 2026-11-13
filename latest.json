@@ -1,19 +1,19 @@
 {
-    "version":  "0.1.11",
-    "tag":  "v0.1.11",
-    "date":  "2026-11-13",
-    "notes":  "- 优化宽屏下房间大厅、房间列表和菜单列表的布局，按原比例铺满可用宽度\n- 修复安卓密码输入时软键盘被系统安全键盘切换干扰、意外关闭的问题\n- 账号密码与房间密码改为明文显示，房间密码使用数字键盘\n- 修复舞台碰撞计算的跨平台浮点精度差异，改善联机同步一致性\n- 统一战斗开场与回合字幕的逻辑计时，修复联机及观战中的开场同步问题",
+    "version":  "0.1.12",
+    "tag":  "v0.1.12",
+    "date":  "2026-11-14",
+    "notes":  "## 新增内容\n- 新增忍者白衣佐助。\n- 新增忍者仙人鸣人及六尾觉醒形态。\n- 新增忍者志乃（少年）。\n- 新增忍者牙（少年）及赤丸。\n\n## 界面与联机\n- UI 界面重构，更新菜单主题、主页布局与选人预览。\n- 房间列表显示房主昵称。\n- 优化联机连接流程，直连尝试缩短为 5 秒，超时后切换中继。\n\n## 战斗与表现修复\n- 修复烟雾特效的遮挡与地面横线问题。\n- 修复部分道具缺失二段攻击的问题。\n- 修复瞬时觉醒按键偶尔重置为预设的问题。\n- 修复奥义命中瞬间的受击姿势。\n- 优化换人时新队长的中间状态与入场动作衔接。\n- 修复部分角色的忍术、奥义及觉醒特效、材质与声音。\n- 修复牙与赤丸的攻击衔接，以及志乃投技和虫群表现。",
     "zip":  {
-                "name":  "NarutoStormFierce-0.1.11-win64.zip",
-                "size":  494184964,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.11/NarutoStormFierce-0.1.11-win64.zip"
+                "name":  "NarutoStormFierce-0.1.12-win64.zip",
+                "size":  650337910,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.12/NarutoStormFierce-0.1.12-win64.zip"
             },
     "android":  {
-                    "version":  "0.1.11",
-                    "name":  "NarutoStormFierce-0.1.11-android.apk",
-                    "size":  547704944,
-                    "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.11/NarutoStormFierce-0.1.11-android.apk",
-                    "date":  "2026-11-13"
+                    "version":  "0.1.12",
+                    "name":  "NarutoStormFierce-0.1.12-android.apk",
+                    "size":  725304793,
+                    "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.12/NarutoStormFierce-0.1.12-android.apk",
+                    "date":  "2026-11-14"
                 },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.11"
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.12"
 }
