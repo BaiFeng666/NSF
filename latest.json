@@ -1,19 +1,19 @@
 {
-    "version":  "0.1.12",
-    "tag":  "v0.1.12",
-    "date":  "2026-11-14",
-    "notes":  "## 新增内容\n- 新增忍者白衣佐助。\n- 新增忍者仙人鸣人及六尾觉醒形态。\n- 新增忍者志乃（少年）。\n- 新增忍者牙（少年）及赤丸。\n\n## 界面与联机\n- UI 界面重构，更新菜单主题、主页布局与选人预览。\n- 房间列表显示房主昵称。\n- 优化联机连接流程，直连尝试缩短为 5 秒，超时后切换中继。\n\n## 战斗与表现修复\n- 修复烟雾特效的遮挡与地面横线问题。\n- 修复部分道具缺失二段攻击的问题。\n- 修复瞬时觉醒按键偶尔重置为预设的问题。\n- 修复奥义命中瞬间的受击姿势。\n- 优化换人时新队长的中间状态与入场动作衔接。\n- 修复部分角色的忍术、奥义及觉醒特效、材质与声音。\n- 修复牙与赤丸的攻击衔接，以及志乃投技和虫群表现。",
+    "version":  "0.1.13",
+    "tag":  "v0.1.13",
+    "date":  "2026-11-15",
+    "notes":  "新增忍者 白\n新增忍者 桃地再不斩\n新增忍者 雏田（少年）（瞬间觉醒）\n新增舞台时空间\n新增舞台瞭望塔\n新增舞台死亡森林\n新增舞台枯木森林\n新增舞台木叶忍村\n新增勘九郎（少年）\n新增舞台砂隐忍者村\n新增舞台砂隐忍者村正门\n新增舞台中忍考试预选会场\n新增舞台静动之森（白天）\n新增舞台鸣人大桥（深渊）\n新增舞台野外求生演习场（白天）\n新增舞台野外求生演习场（傍晚）\n新增舞台中忍考试正式选拔会场\n修复起爆玉丢不出去\n修复2P援助UI错误\n修复联机对战开战语音\n修复当身无法弹飞换人追击\n修复部分连段挑飞后悬停提前结束的问题。\n恢复查克拉冲刺命中的震屏反馈。\n修复安卓特效有时爆闪\n修复切人被奥义打到进动画\n修复切人被当身弹飞\n修复对战时间200秒\n修复当身成功的效果、音效\n修复援助值数值系统\n增加表情系统\n可以显示观战人数\n被当身限制瞬间觉醒取消后摇\n降低冲刺、蓄力冲刺的削盾值\n优化虚拟手柄手感 将更多按键加入滑动触发\n3局赛制血条改为继承机制\n训练场菜单加入指令列表\n训练场支持 COM 对手，可在练习赛设定中切换。\n优化 PC 增量更新补丁，减少未来更新下载量。",
     "zip":  {
-                "name":  "NarutoStormFierce-0.1.12-win64.zip",
-                "size":  650337910,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.12/NarutoStormFierce-0.1.12-win64.zip"
+                "name":  "NarutoStormFierce-0.1.13-win64.zip",
+                "size":  941132592,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.13/NarutoStormFierce-0.1.13-win64.zip"
             },
     "android":  {
-                    "version":  "0.1.12",
-                    "name":  "NarutoStormFierce-0.1.12-android.apk",
-                    "size":  725304793,
-                    "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.12/NarutoStormFierce-0.1.12-android.apk",
-                    "date":  "2026-11-14"
+                    "version":  "0.1.13",
+                    "name":  "NarutoStormFierce-0.1.13-android.apk",
+                    "size":  1107111193,
+                    "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.13/NarutoStormFierce-0.1.13-android.apk",
+                    "date":  "2026-11-15"
                 },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.12"
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.13"
 }
