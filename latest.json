@@ -1,19 +1,19 @@
 {
-    "version":  "0.1.13",
-    "tag":  "v0.1.13",
+    "version":  "0.1.14",
+    "tag":  "v0.1.14",
     "date":  "2026-11-15",
-    "notes":  "新增忍者 白\n新增忍者 桃地再不斩\n新增忍者 雏田（少年）（瞬间觉醒）\n新增舞台时空间\n新增舞台瞭望塔\n新增舞台死亡森林\n新增舞台枯木森林\n新增舞台木叶忍村\n新增勘九郎（少年）\n新增舞台砂隐忍者村\n新增舞台砂隐忍者村正门\n新增舞台中忍考试预选会场\n新增舞台静动之森（白天）\n新增舞台鸣人大桥（深渊）\n新增舞台野外求生演习场（白天）\n新增舞台野外求生演习场（傍晚）\n新增舞台中忍考试正式选拔会场\n修复起爆玉丢不出去\n修复2P援助UI错误\n修复联机对战开战语音\n修复当身无法弹飞换人追击\n修复部分连段挑飞后悬停提前结束的问题。\n恢复查克拉冲刺命中的震屏反馈。\n修复安卓特效有时爆闪\n修复切人被奥义打到进动画\n修复切人被当身弹飞\n修复对战时间200秒\n修复当身成功的效果、音效\n修复援助值数值系统\n增加表情系统\n可以显示观战人数\n被当身限制瞬间觉醒取消后摇\n降低冲刺、蓄力冲刺的削盾值\n优化虚拟手柄手感 将更多按键加入滑动触发\n3局赛制血条改为继承机制\n训练场菜单加入指令列表\n训练场支持 COM 对手，可在练习赛设定中切换。\n优化 PC 增量更新补丁，减少未来更新下载量。",
+    "notes":  "修复2p虚拟手柄失效\n优化侧跳到移动后摇\n修复勘九郎空段攻击\n修复一些舞台天空\n修复上次更新底层导致的部分bug\n修复空中防御受击特效\n修复佐助下段攻击僵直",
     "zip":  {
-                "name":  "NarutoStormFierce-0.1.13-win64.zip",
-                "size":  941132592,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.13/NarutoStormFierce-0.1.13-win64.zip"
+                "name":  "NarutoStormFierce-0.1.14-win64.zip",
+                "size":  941132975,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.14/NarutoStormFierce-0.1.14-win64.zip"
             },
     "android":  {
-                    "version":  "0.1.13",
-                    "name":  "NarutoStormFierce-0.1.13-android.apk",
-                    "size":  1107111193,
-                    "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.13/NarutoStormFierce-0.1.13-android.apk",
+                    "version":  "0.1.14",
+                    "name":  "NarutoStormFierce-0.1.14-android.apk",
+                    "size":  1107104637,
+                    "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.14/NarutoStormFierce-0.1.14-android.apk",
                     "date":  "2026-11-15"
                 },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.13"
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.14"
 }
