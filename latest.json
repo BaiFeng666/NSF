@@ -1,19 +1,19 @@
 {
-    "version":  "0.1.15",
-    "tag":  "v0.1.15",
+    "version":  "0.1.16",
+    "tag":  "v0.1.16",
     "date":  "2026-11-22",
-    "notes":  "**本次重构了大量底层架构，可能仍有问题。欢迎大家多测试，遇到异常请反馈。**\n\n### 架构与联机\n- 重构底层架构，缩小 Windows 整包体积。\n- 重构联机存档与回滚机制。在相同网络条件下，联机操作延迟比《风暴》原版更低，操作更跟手。\n- 新增联机对战前的热身阶段，等待轮到自己时可以进入训练场。\n\n### 新角色\n- 宇智波斑、长门、猿飞阿斯玛、手鞠（少年篇）。\n\n### 战斗调整\n- 重构第二忍术和特殊技。第二忍术改为推住左摇杆后依次按 Y、B（△、○）。\n- 新增长按攻击蓄力机制「黄芪」。\n- 限制特殊技的发动窗口，并收紧使用条件。\n- 调整蓄力与冲刺相撞时的判定，蓄力一方占优。\n\n### 问题修复\n- 修复当身成功效果、抓取被当身，以及被当身后可以立刻替身的问题。\n- 修复替身补按窗口（0.33 至 0.67 秒）。\n- 修复佐助等角色的碎衣模型错误。\n- 修复断连（直接取消连段）和眩晕时的奥义减伤。\n- 修复傀儡师机制及其他若干问题。\r\n",
+    "notes":  "- 安卓：修复部分设备进入战斗时卡在加载进度的问题。\n- 安卓：修复虚拟手柄错位。\r\n",
     "zip":  {
-                "name":  "NarutoStormFierce-0.1.15-win64.zip",
-                "size":  894860902,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.15/NarutoStormFierce-0.1.15-win64.zip"
+                "name":  "NarutoStormFierce-0.1.16-win64.zip",
+                "size":  895067600,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.16/NarutoStormFierce-0.1.16-win64.zip"
             },
     "android":  {
-                    "version":  "0.1.15",
-                    "name":  "NarutoStormFierce-0.1.15-android.apk",
-                    "size":  1092332042,
-                    "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.15/NarutoStormFierce-0.1.15-android.apk",
+                    "version":  "0.1.16",
+                    "name":  "NarutoStormFierce-0.1.16-android.apk",
+                    "size":  1092548506,
+                    "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.16/NarutoStormFierce-0.1.16-android.apk",
                     "date":  "2026-11-22"
                 },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.15"
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.16"
 }
