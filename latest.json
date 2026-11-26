@@ -1,19 +1,19 @@
 {
-    "version":  "0.1.16",
-    "tag":  "v0.1.16",
-    "date":  "2026-11-22",
-    "notes":  "- 安卓：修复部分设备进入战斗时卡在加载进度的问题。\n- 安卓：修复虚拟手柄错位。\r\n",
+    "version":  "0.1.17",
+    "tag":  "v0.1.17",
+    "date":  "2026-11-26",
+    "notes":  "## 全新机制\n\n- **精准防御**：在攻击命中前约 30 毫秒内按下防御，可触发精准防御。时机要求很高。成功后可反弹普通飞行道具、打消远程奥义起手，或使近身攻击的对手陷入僵直。\n\n## 新增忍者\n\n- 宇智波鼬\n- 疯狂阿凯（瞬时觉醒）\n- 疯狂阿凯（死门）\n- 疾风传小李（瞬时觉醒）\n- 疾风传鹿丸\n- 疾风传志乃（瞬时觉醒，虫子可吸收对手的查克拉）\n- 疾风传牙\n- 香磷\n\n## 新增舞台\n\n- 妙木山\n- 云雷峡\n- 「晓」的根据地\n- 木叶之森（白天）\n\n## 系统与界面\n\n- 新增增益效果（Buff）显示与字幕系统。\n- 重构战斗界面和选人页面。\n- 重构黄芪机制。\n- 新增可选奥义系统，部分忍者可从多个奥义中选择。\n- 更换当身成功的音效。\n\n## 修复与优化\n\n- 修复空中秒破、深渊舞台无法进入、斑的须佐能乎特效异常。\n- 修复查克拉冲刺追踪、奥义过程中受击，以及忍者冲刺与手里剑的交互逻辑。\n- 提升人机的战斗能力，优化按键预约和多项特效的渲染性能。\n- 修复其他若干问题。\r\n",
     "zip":  {
-                "name":  "NarutoStormFierce-0.1.16-win64.zip",
-                "size":  895067600,
-                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.16/NarutoStormFierce-0.1.16-win64.zip"
+                "name":  "NarutoStormFierce-0.1.17-win64.zip",
+                "size":  1221167075,
+                "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.17/NarutoStormFierce-0.1.17-win64.zip"
             },
     "android":  {
-                    "version":  "0.1.16",
-                    "name":  "NarutoStormFierce-0.1.16-android.apk",
-                    "size":  1092548506,
-                    "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.16/NarutoStormFierce-0.1.16-android.apk",
-                    "date":  "2026-11-22"
+                    "version":  "0.1.17",
+                    "name":  "NarutoStormFierce-0.1.17-android.apk",
+                    "size":  1494798599,
+                    "url":  "https://github.com/BaiFeng666/NSF/releases/download/v0.1.17/NarutoStormFierce-0.1.17-android.apk",
+                    "date":  "2026-11-26"
                 },
-    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.16"
+    "release_url":  "https://github.com/BaiFeng666/NSF/releases/tag/v0.1.17"
 }
